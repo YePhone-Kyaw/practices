@@ -1,9 +1,24 @@
 ﻿namespace ValueTypesAndReferenceTypes
 {
+    // Struct is a value type, it is stored in the stack memory.
+    public struct coordinates  {
+        public int x;
+        public int y;
+        public int z;
+    }
     class Program
     {
         static void Main(string[] args)
         {
+
+            coordinates xyz = new coordinates();
+            xyz.x = 10;
+            xyz.y = 20;
+            xyz.z = 30;
+
+            coordinates x1y1z1 = xyz; // Copy by value
+            x1y1z1.x = 100;
+
             // Value types
             // i value stays the same even after y is changed to 30 cause they have different memory addresses.
             int i = 10; // primitive data types
