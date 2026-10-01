@@ -34,4 +34,9 @@
     }
 }
 
+// Delegates
+
 // Point of Delegates is to listen something with the asyncronus 
+// more related to event (callback)
+// i want to listen something which is asyncronus event and data
+// Multicast delegates, Action, Predicate, Func, Event
