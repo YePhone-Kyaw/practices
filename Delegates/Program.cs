@@ -2,17 +2,19 @@
 {
     class Program
     {
+        static void IamListener(int i)
+        {
+            Console.WriteLine(i);
+        }
         static void Main(string[] args)
         {
             MyClass x = new MyClass();
             x.streamObj = IamListener;
             Task t = new Task(x.Task);
             t.Start();
-        }
 
-        static void IamListener(int i)
-        {
-            Console.WriteLine(i);
+            Console.WriteLine("Hello World!");
+            Console.ReadLine();
         }
     }
 
@@ -27,7 +29,6 @@
             {
                 Thread.Sleep(1000);
                 streamObj(i);
-
             }
         }
     }
